@@ -1,6 +1,15 @@
 html {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
+}
+:root
+{
+    --primary-color: #5c99ee;
+    --secondary-color: #344761;
+    --background-color: #f9f9f9;
+    --text-color: #344761;
+    --section-padding: 60px;
+    --transition-mode: all 0.3s ease-in-out;
 }
 a{
     text-decoration: none;
@@ -9,7 +18,7 @@ a{
 .hero{
     display: flex;
     flex-direction: row;
-   align-items: center;
+    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     
@@ -34,16 +43,16 @@ a{
     font-size: 3em;
   
     margin-bottom: 20px;
-    color: #344761;
+    color: var(--text-color);
 }
 .hero-content p{
     font-size: 1.2em;
-    color: #344761bb;
+    color: var(--text-color);
     text-align: center;
     max-width: 600px;
 }
  .hero-content h1 span{
-    color: #5c99ee;
+    color: var(--primary-color);
     border-bottom: 2px solid #5c99eeb8;
 
 }
@@ -65,7 +74,8 @@ a{
     width: auto;
     max-width: 100%;
 
-    color: #344761;
+    color: var(--text-color);
+    padding: var(--section-padding);
 }
 .about-image img {
     max-width: 100%;
@@ -77,14 +87,14 @@ a{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-            /* width: 50%; */
+          
     max-width: 50%; 
     width: auto;
 }
 
 .about .about-content .num{
    
-    border-top: 1px solid #535d6bb9;
+    border-top: 1px solid var(--primary-color);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -92,11 +102,11 @@ a{
     flex-wrap: wrap;
     gap: 40px;
 
-    color: #344761;
+    color: var(--text-color);
 
 }
 .about .about-content .num h3{
- color: #5c99ee;
+ color: var(--primary-color);
 }
 
 .services
@@ -111,7 +121,8 @@ a{
     width: auto;
     max-width: 100%;
 
-    color: #344761;
+    color: var(--text-color);
+    padding: var(--section-padding);
 }
 .services .services-header,
 .portfolio .portfolio-header{
@@ -122,7 +133,8 @@ a{
 , .portfolio .portfolio-header h2 span{
     font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 3px solid #5c99ee;
+    border-bottom: 3px solid var(--primary-color);
+   
 }
 
 .services .services-cards{
@@ -145,13 +157,15 @@ a{
  .mycard:hover{
     box-shadow: 0 4px 8px 0 rgba(14, 121, 243, 0.366);
     transform: translateY(-5px);
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-mode);
     
 }
 
 .services .services-cards .mycard a{
-    text-decoration: none;
-    color: #344761;
+    /* text-decoration: none; */
+    color: var(--text-color);
+
+
 }
 /* .services .services-cards .mycard a:hover{
     text-decoration: none;
@@ -165,7 +179,7 @@ a{
     justify-content: space-around;
     gap: 15px;
     margin-top: 30px;
-    color: #344761;
+    color: var(--text-color);
 }
 .cardsOnly .mycard{
     width: 23vw;
@@ -190,7 +204,7 @@ a{
 .hero .hero-link .watch-demo .icon {
     width: 50px;
     height: 50px;
-    background-color: #5c99ee;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -201,30 +215,30 @@ a{
 
 .watch-demo:hover {    
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-mode);
    
 }
 .hero .hero-link .my-btn{
-    background-color: #5c99ee;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 10px 20px;
     width: auto;
     height: 50px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    
 
 }
 .hero .hero-link .my-btn:hover{
     
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-mode);
    
 }
 
 .services .services-cards .mycard .icon {
     font-size: 1.1em;
-    color: #5c99ee;
+    color: var(--primary-color);
     background-color: #cadefa;
     margin-bottom: 15px;
     width: 50px;
@@ -235,11 +249,19 @@ a{
     justify-content: center;
     font-size: larger;
 }
-.services .services-cards .mycard:hover .icon{
-    background-color: #5c99ee;
+.services .services-cards .mycard:hover .icon
+{
+    background-color: var(--primary-color);
+    
     color: white;
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-mode);
+}
+.services .services-cards .mycard:hover a{
+    color: var(--primary-color);
+    transform: scale(1.1);
+    transition: var(--transition-mode);
+
 }
 
 .portfolio .portfolio-gallery{
@@ -268,13 +290,16 @@ a{
 }
 .portfolio .portfolio-gallery .portfolio-item img{
     width: 100%;
-    height: 50%;
+    /* height: 50%; */
     border-radius: 10px;
+    flex:1;
+    object-fit: cover;
+
 
 }
 .portfolio .portfolio-gallery .portfolio-item:hover{
     box-shadow: 0 4px 8px 0 rgba(14, 121, 243, 0.366);
     transform: translateY(-5px);
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition-mode) ;
     
 }
