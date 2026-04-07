@@ -51,7 +51,7 @@ h1, h2, h3{
 }
 
 .mycard{
-    width: 30vw;
+    width: 25vw;
     border: 1px solid #d1d9e6;
     padding: 20px;
     border-radius: 10px;
@@ -219,8 +219,7 @@ services and portfolio
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
     min-height: 100vh;
     width: auto;
     
@@ -302,7 +301,7 @@ services and portfolio
 }
 
 .portfolio .portfolio-gallery .portfolio-item{
-    width: 30vw;
+    width: 25vw;
     /* border: 1px solid #d1d9e6; */
     /* padding: 10px; */
     border-radius: 10px;
